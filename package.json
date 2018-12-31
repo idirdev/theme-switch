@@ -1,0 +1,24 @@
+{
+  "name": "theme-switch",
+  "version": "1.0.0",
+  "description": "React dark/light theme hook and toggle component",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "typescript": "^5.6.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0"
+  },
+  "keywords": ["react", "theme", "dark-mode", "light-mode", "toggle"],
+  "license": "MIT"
+}
