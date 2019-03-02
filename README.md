@@ -1,3 +1,5 @@
+> **Archived** — Kept for reference. Not part of the current portfolio.
+
 # 🌓 Theme Switch
 
 ![React](https://img.shields.io/badge/React-18+-61DAFB?logo=react)
