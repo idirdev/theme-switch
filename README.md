@@ -85,3 +85,21 @@ Available presets: `slate`, `zinc`, `stone`
 ## License
 
 MIT
+
+---
+
+## 🇫🇷 Documentation en français
+
+### Description
+**Theme Switch** est un composant React de bascule de thème (clair/sombre) avec persistance dans le localStorage et animation fluide. Il s'intègre facilement dans n'importe quelle application React et respecte les préférences système de l'utilisateur via `prefers-color-scheme`.
+
+### Installation
+```bash
+npm install @idirdev/theme-switch
+```
+
+### Utilisation
+```tsx
+import { ThemeSwitch } from "@idirdev/theme-switch";
+// <ThemeSwitch />   — ajoute le bouton bascule dans votre interface
+```
