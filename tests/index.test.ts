@@ -85,3 +85,49 @@ describe('resolveTheme', () => {
     expect(resolveTheme('system')).toBe('light');
   });
 });
+
+describe('resolveTheme - additional', () => {
+  it('returns light for mode light', () => {
+    expect(resolveTheme('light')).toBe('light');
+  });
+
+  it('returns dark for mode dark', () => {
+    expect(resolveTheme('dark')).toBe('dark');
+  });
+
+  it('returns a theme string for system mode', () => {
+    const result = resolveTheme('system');
+    expect(['light', 'dark']).toContain(result);
+  });
+});
+
+describe('presets - additional coverage', () => {
+  it('has at least 3 presets', () => {
+    expect(Object.keys(presets).length).toBeGreaterThanOrEqual(3);
+  });
+
+  it('slate preset light has --bg-primary', () => {
+    expect(presets.slate.light['--bg-primary']).toBeTruthy();
+  });
+
+  it('slate preset dark has --text-primary', () => {
+    expect(presets.slate.dark['--text-primary']).toBeTruthy();
+  });
+
+  it('zinc preset has a name', () => {
+    expect(presets.zinc.name).toBeTruthy();
+  });
+
+  it('stone preset has light and dark', () => {
+    expect(presets.stone.light).toBeDefined();
+    expect(presets.stone.dark).toBeDefined();
+  });
+
+  it('getPresetNames returns array with zinc', () => {
+    expect(getPresetNames()).toContain('zinc');
+  });
+
+  it('getPreset returns undefined for invalid', () => {
+    expect(getPreset('doesnotexist')).toBeUndefined();
+  });
+});
